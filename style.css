@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Common styles */
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Common border style */
+.border {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.top-content {
+    background-color: rgba(218, 88, 32, 255);
+    width: auto;
+    margin: 0 auto 0px auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    background-color: rgba(241, 222, 222, 0.692);
+    width: 100%;
+    display: flex;
+    height: 400px;
+}
+
+.grid-container {
+    width: 90%;
+    margin: 50px auto 100px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+
+label {
+    display: inline-block;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0 30px;
+    line-height: 60px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: white;
+    text-shadow: -1px -1px 0 black,  
+                 1px -1px 0 black,
+                -1px 1px 0 black,
+                 1px 1px 0 black;
+}
+
+label:hover {
+    background-color: white;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.name-container {
+    padding: 10px;
+    font-size: 10px;
+    color: #333;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.buttons {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    margin-bottom: px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-content label {
+    padding: 5px 10px;
+    margin: 5px;
+    line-height: normal;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    padding: 0;
+    position: relative;
+    top: 50%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content,
+.close {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.charges {
+    color: black;
+    padding: 0px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.charges table {
+    flex: 1;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(248, 239, 239);
+}
+
+.charges table td {
+    padding: 4px;
+}
+
+.charges table tr:last-child td {
+    border-bottom: none;
+}
+
+.charges td:first-child {
+    font-weight: bold;
+    color: blue;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+}
+
+
+
+
+#booked-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+#booked-info .highlight {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#booked-info .updated {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contact-button button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-button button:hover {
+    background-color: #45a049;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.warning {
+    margin-bottom: 10px;
+}
+
+/* Search Bar and Filter Dropdown Styles */
+.search-filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#search-bar {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.sort-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    max-height: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.sort-dropdown img {
+    cursor: pointer;
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+@media screen and (min-width: 601px) {
+    .image-container p {
+        font-size: 13px; /* Increase font size for desktop screens */
+    }
+}

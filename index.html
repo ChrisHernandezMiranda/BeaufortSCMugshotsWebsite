@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1></h1>
+
+        <div class="top-content">
+            <label for="72-hours" id="seventyTwoHoursNav">72 Hours</label>
+            <label for="15-days" id="fifteenDaysNav">15 Days</label>
+            <label for="90-days" id="ninetyDaysNav">90 Days</label>
+        </div>
+
+        <div class="logo">
+            <img src="logo.svg" alt="SVG Image" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="buttons" id="booked-info">
+            <span class="highlight">Booked Within The Last <strong>72 Hours</strong></span>
+            <span class="updated">Updated: 3/11/2024</span>
+            <span class="warning">*Not associated with Beaufort County. For official information please click <a
+                    href="https://beaufortcountysc.gov/detention-center/inmate-inquiry-system.html">here</a>.</span>
+
+            <!-- Search Bar and Filter Dropdown -->
+            <div class="search-filter">
+                <input type="text" id="search-bar" placeholder="Search All...">
+                <!-- Search button removed -->
+                <div class="sort-dropdown">
+                    <img src="sort.png" alt="Sort Icon" onclick="toggleSort()">
+                    <div class="dropdown-content" id="sortDropdown">
+                        <a href="#" id="name" onclick="sortBy('name')">Name</a>
+                        <a href="#" id="date" onclick="sortBy('date')">Date</a>
+                        <!-- Add more sorting options as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="mugshotDiv">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
+            <div class="charges">
+                <table id="chargesTable">
+                    <!-- Table rows will be dynamically populated here -->
+                </table>
+            </div>
+        </div>
+
+        <div class="grid-container"></div>
+
+        <footer class="footer">
+            <div class="contact-button">
+                <span>Contact Us:</span>
+            </div>
+            <div class="email">
+                BeaufortSCMugshots@gmail.com
+            </div>
+            <div class="copyright">
+                &copy; BeaufortSCMugshots 2024
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
