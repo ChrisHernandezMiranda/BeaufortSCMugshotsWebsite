@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
     footer.style.display = 'none'; // Set the initial display of the footer
 
     // Default view: 72 Hours
-    currentJsonFile = '3_14_24 72hours.json';
+    currentJsonFile = '3_19_24 72hours.json';
     changeHeaderText("Booked Within the Last 72 Hours");
     // Fetch data for the last 72 hours
     fetch72HoursData();
 
     // Event listener for the "72 Hours" label
     document.getElementById('seventyTwoHoursNav').addEventListener('click', function () {
-        currentJsonFile = '3_14_24 72hours.json';
+        currentJsonFile = '3_19_24 72hours.json';
         // Clear the grid container
         clearGrid();
 
@@ -88,7 +88,7 @@ document.getElementById('date').addEventListener('click', function () {
 
     // Function to fetch data for the last 72 hours
     function fetch72HoursData() {
-        fetch('3_14_24 72hours.json') // Change the URL to fetch data for the last 72 hours
+        fetch('3_19_24 72hours.json') // Change the URL to fetch data for the last 72 hours
             .then(response => response.json())
             .then(data => {
                 // Loop through the wanted_people array
@@ -105,7 +105,7 @@ document.getElementById('date').addEventListener('click', function () {
 
     // Function to fetch data for the last 90 days
     function fetch90DaysData() {
-        fetch('3_14_24 90days.json') // Fetch data for the last 90 days
+        fetch('3_19_24 90days.json') // Fetch data for the last 90 days
             .then(response => response.json())
             .then(data => {
                 // Loop through the wanted_people array
@@ -122,7 +122,7 @@ document.getElementById('date').addEventListener('click', function () {
 
 
     function fetch15DaysData() {
-        fetch('3_14_24 15days.json') // Fetch data for the last 90 days
+        fetch('3_19_24 15days.json') // Fetch data for the last 90 days
             .then(response => response.json())
             .then(data => {
                 // Loop through the wanted_people array
@@ -264,7 +264,7 @@ document.getElementById('date').addEventListener('click', function () {
 
     // Function to fetch data for the last 72 hours with search term
     function fetch72HoursDataWithSearch(term) {
-        fetch('3_14_24 72hours.json') // Change the URL to fetch data for the last 72 hours
+        fetch('3_19_24 72hours.json') // Change the URL to fetch data for the last 72 hours
             .then(response => response.json())
             .then(data => {
                 // Filter the wanted_people array based on the search term
@@ -285,7 +285,7 @@ document.getElementById('date').addEventListener('click', function () {
 
     // Function to fetch data for the last 90 days with search term
     function fetch90DaysDataWithSearch(term) {
-        fetch('3_14_24 90days.json') // Fetch data for the last 90 days
+        fetch('3_19_24 90days.json') // Fetch data for the last 90 days
             .then(response => response.json())
             .then(data => {
                 // Filter the wanted_people array based on the search term
@@ -305,7 +305,7 @@ document.getElementById('date').addEventListener('click', function () {
     }
 
     function fetch15DaysDataWithSearch(term) {
-        fetch('3_14_24 15days.json') // Fetch data for the last 90 days
+        fetch('3_19_24 15days.json') // Fetch data for the last 90 days
             .then(response => response.json())
             .then(data => {
                 // Filter the wanted_people array based on the search term
